@@ -1,0 +1,45 @@
+[project]
+name = "kr-trading-calendar"
+version = "0.1.0"
+requires-python = ">=3.11"
+description = "KRX trading-day math: offset, range, and holiday checks for Korean capital markets"
+authors = [{name = "pon00050"}]
+license = {text = "MIT"}
+readme = "README.md"
+keywords = ["kosdaq", "kospi", "krx", "korea", "trading-calendar", "exchange-calendars"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Financial and Insurance Industry",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Office/Business :: Financial",
+]
+dependencies = [
+    "pandas",
+    "exchange-calendars>=4.13.2",
+]
+
+[project.urls]
+Repository = "https://github.com/pon00050/kr-trading-calendar"
+Issues = "https://github.com/pon00050/kr-trading-calendar/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/kr_trading_calendar"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[tool.uv]
+compile-bytecode = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
