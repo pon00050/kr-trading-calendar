@@ -24,6 +24,6 @@ Thumbs.db
 # Knowledge layer (private thinking — never commit)
 knowledge/
 
-# Tool caches
-.claude/
+# Tool caches (keep .claude/settings.json committed)
+.claude/settings.local.json
 .obsidian/
