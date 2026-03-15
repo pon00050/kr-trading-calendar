@@ -69,6 +69,25 @@ All three functions accept `str` or `pd.Timestamp` for date arguments.
 
 This package was extracted from [kr-forensic-finance](https://github.com/pon00050/kr-forensic-finance), where it powers the ±60 trading-day price windows used in CB/BW event analysis and timing anomaly detection. It has zero dependencies on that project and is useful independently for any Korean market data work.
 
+## Development
+
+```bash
+# Install dependencies
+uv sync --extra dev
+
+# Run tests
+uv run pytest tests/ -v
+
+# Quick smoke test
+uv run python -c "from kr_trading_calendar import trading_day_offset; print(trading_day_offset('2021-02-15', -60))"
+```
+
+**Conventions**
+- Python >=3.11
+- All dates normalize to midnight via `pd.Timestamp.normalize()`
+- `trading_day_offset` snaps non-session dates to the nearest session in the offset direction before counting
+- Build backend: hatchling; package manager: uv
+
 ## License
 
 MIT
