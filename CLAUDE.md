@@ -37,6 +37,12 @@ src/kr_trading_calendar/
 | `trading_days_in_range(start, end)` | Returns DatetimeIndex of all sessions in range |
 | `trading_day_offset(date, n)` | Returns session n trading days forward/backward |
 
+## Known Gaps
+
+| Gap | Why | Status |
+|-----|-----|--------|
+| 임시공휴일 (ad-hoc holidays) lag by days/weeks | Depends on upstream `exchange_calendars` community PR cycle | By design — documented in `_calendar.py:11` |
+
 ## Conventions
 
 - Calendar instance is lazy-loaded and cached (module-level `_xkrx`)
