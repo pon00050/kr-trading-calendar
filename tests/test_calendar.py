@@ -1,6 +1,6 @@
 """Tests for kr_trading_calendar.
 
-Ported from kr-forensic-finance TestKoreanTradingCalendar.
+Ported from the pre-split forensic monolith (now this standalone library).
 All date expectations verified against exchange_calendars XKRX v4.13.2.
 """
 
@@ -92,7 +92,7 @@ class TestTradingDaysInRange:
         """Documents that 60 calendar days != 60 trading days.
 
         +/-60 calendar days around 2021-02-15 gives only 38 sessions per side,
-        not 60. This is the bug that kr-forensic-finance KI-043 fixed.
+        not 60. This is the off-by-N error that this library was extracted to fix.
         """
         old_start = pd.Timestamp("2020-12-17")  # 2021-02-15 - 60 calendar days
         issue_date = pd.Timestamp("2021-02-15")
