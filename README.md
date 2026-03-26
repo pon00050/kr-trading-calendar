@@ -65,9 +65,9 @@ All three functions accept `str` or `pd.Timestamp` for date arguments.
 - **Holidays covered:** All statutory Korean public holidays, KRX-specific closures
 - **Not covered in real-time:** 임시공휴일 (ad-hoc government holidays) — see note above
 
-## Relationship to kr-forensic-finance
+## Relationship to krff-shell
 
-This package was extracted from [kr-forensic-finance](https://github.com/pon00050/kr-forensic-finance), where it powers the ±60 trading-day price windows used in CB/BW event analysis and timing anomaly detection. It has zero dependencies on that project and is useful independently for any Korean market data work.
+This package was extracted from [krff-shell](https://github.com/pon00050/krff-shell), where it powers the ±60 trading-day price windows used in CB/BW event analysis and timing anomaly detection. It has zero dependencies on that project and is useful independently for any Korean market data work.
 
 ## Development
 

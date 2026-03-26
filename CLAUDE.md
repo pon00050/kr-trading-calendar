@@ -9,7 +9,7 @@ Part of the Korean forensic accounting toolkit.
 - Task board: https://github.com/users/pon00050/projects/1
 - Role: Foundation library
 - Depends on: none
-- Consumed by: kr-forensic-finance (trading-day math), kr-derivatives (calendar module)
+- Consumed by: krff-shell (trading-day math), kr-derivatives (calendar module)
 
 ## Common Commands
 
