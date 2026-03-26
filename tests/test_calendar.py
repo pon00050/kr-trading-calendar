@@ -47,6 +47,32 @@ class TestTradingDayOffset:
         assert result == pd.Timestamp("2021-05-12")
 
 
+    def test_non_session_input_forward(self):
+        """Offset from a holiday snaps forward before counting.
+
+        2021-02-12 (설날) is a holiday.
+        searchsorted returns the index of 2021-02-15 (next session).
+        +1 from there gives 2021-02-16 (one step beyond the snap target).
+        """
+        result = trading_day_offset("2021-02-12", 1)
+        assert result == pd.Timestamp("2021-02-16")
+
+    def test_non_session_input_backward(self):
+        """Offset from a holiday going backward.
+
+        2021-02-12 (설날) is a holiday.
+        searchsorted returns the index of 2021-02-15 (next session).
+        -1 from there gives 2021-02-10 (session before the holiday week).
+        """
+        result = trading_day_offset("2021-02-12", -1)
+        assert result == pd.Timestamp("2021-02-10")
+
+    def test_non_session_input_zero(self):
+        """Offset of 0 from a holiday returns next session (snap forward)."""
+        result = trading_day_offset("2021-02-12", 0)
+        assert result == pd.Timestamp("2021-02-15")
+
+
 class TestTradingDaysInRange:
     """trading_days_in_range returns sessions within a date range."""
 
