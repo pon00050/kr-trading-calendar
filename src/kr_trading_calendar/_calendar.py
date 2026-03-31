@@ -5,7 +5,7 @@ Wraps exchange_calendars XKRX to provide explicit Korean trading-day logic.
 Coverage:
     - All statutory Korean public holidays (설날, 추석, 공휴일)
     - KRX-specific market closures (year-end half-days, etc.)
-    - Historical data 2018-2023: complete
+    - Historical data 2018-present: sourced from exchange_calendars XKRX (updated with each library release)
 
 Gap:
     - 임시공휴일 (ad-hoc government holidays) require a community PR to

@@ -17,7 +17,7 @@ Part of the Korean forensic accounting toolkit.
 # Install with dev dependencies
 uv sync --extra dev
 
-# Run tests
+# Run tests (13 tests)
 uv run pytest tests/ -v
 ```
 
