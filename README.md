@@ -1,5 +1,7 @@
 # kr-trading-calendar
 
+**[Read the full write-up →](https://ronanwrites.vercel.app/manuals/korean-trading-day-math)**
+
 KRX trading-day math for Korean capital markets.
 
 Three functions that answer: *"What date is N trading days from here?"*, *"Is this date a trading day?"*, and *"How many trading sessions are in this range?"* — correctly accounting for Korean holidays (설날, 추석, 공휴일) and KRX market closures.
@@ -17,9 +19,7 @@ The Korean government occasionally declares ad-hoc public holidays (e.g., electi
 ## Quick Start
 
 ```bash
-pip install kr-trading-calendar
-# or
-uv add kr-trading-calendar
+uv add git+https://github.com/pon00050/kr-trading-calendar
 ```
 
 ```python

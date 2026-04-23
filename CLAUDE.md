@@ -55,3 +55,8 @@ src/kr_trading_calendar/
 1. `uv run pytest tests/ -v` — all green
 2. Stage specific files by name
 3. Commit with descriptive message
+
+
+---
+
+**Domain knowledge** (regulatory analysis, buyer research, competitive intelligence, legal compliance) belongs in the hub vault: `forensic-accounting-toolkit/knowledge/`. Engineering docs (API patterns, test strategies, run logs) stay here. After creating a new domain knowledge note, copy it to the hub with gold-standard frontmatter. See hub `CLAUDE.md` §Knowledge Vault for the frontmatter contract.
